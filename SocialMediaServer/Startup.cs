@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using PatientRegistrationServer.Extensions;
 
 namespace SocialMediaServer
 {
@@ -26,6 +27,11 @@ namespace SocialMediaServer
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.ConfigureCors();
+            services.ConfigureIISIntegration();
+            services.ConfigureSqlContext(Configuration);
+            services.ConfigureRepositoryWrapper();
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -48,6 +54,11 @@ namespace SocialMediaServer
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCors(options =>
+                options.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader());
 
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
         }

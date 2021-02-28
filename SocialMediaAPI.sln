@@ -2,6 +2,12 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialMediaServer", "SocialMediaServer\SocialMediaServer.csproj", "{7E00C64E-603A-4260-9218-CC0BE5EE6867}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{690F3277-A323-4460-8814-98D93E8E2F11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Contracts\Contracts.csproj", "{4EF969CF-9E34-4CB5-91AF-C575D04632FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{90E7E2AE-511F-47EC-AB0C-D0EE3E669B4A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +18,17 @@ Global
 		{7E00C64E-603A-4260-9218-CC0BE5EE6867}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E00C64E-603A-4260-9218-CC0BE5EE6867}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E00C64E-603A-4260-9218-CC0BE5EE6867}.Release|Any CPU.Build.0 = Release|Any CPU
+		{690F3277-A323-4460-8814-98D93E8E2F11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{690F3277-A323-4460-8814-98D93E8E2F11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{690F3277-A323-4460-8814-98D93E8E2F11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{690F3277-A323-4460-8814-98D93E8E2F11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EF969CF-9E34-4CB5-91AF-C575D04632FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EF969CF-9E34-4CB5-91AF-C575D04632FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EF969CF-9E34-4CB5-91AF-C575D04632FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EF969CF-9E34-4CB5-91AF-C575D04632FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90E7E2AE-511F-47EC-AB0C-D0EE3E669B4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90E7E2AE-511F-47EC-AB0C-D0EE3E669B4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90E7E2AE-511F-47EC-AB0C-D0EE3E669B4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90E7E2AE-511F-47EC-AB0C-D0EE3E669B4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
