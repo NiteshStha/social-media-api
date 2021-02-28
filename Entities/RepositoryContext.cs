@@ -1,5 +1,7 @@
-﻿using Entities.models;
+﻿using System;
+using Entities.models;
 using Microsoft.EntityFrameworkCore;
+using Utilities.Helpers;
 
 namespace Entities
 {
@@ -9,8 +11,21 @@ namespace Entities
         {
         }
 
-        public DbSet<User> Types { get; set; }
-        public DbSet<Post> TechnicalMachines { get; set; }
-        public DbSet<Comment> Moves { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Post> Posts { get; set; }
+        public DbSet<Comment> Comments { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<User>().HasData(new
+            {
+                UserId = 1,
+                FirstName = "Nitesh",
+                LastName = "Shrestha",
+                Username = "nitesh",
+                Password = PasswordHelper.HashPassword("123456"),
+                DateOfBirth = DateTime.Now
+            });
+        }
     }
 }

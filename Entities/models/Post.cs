@@ -8,12 +8,11 @@ namespace Entities.models
     public class Post
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public Guid PostId { get; set; }
+        public int PostId { get; set; }
 
-        public string PostTitle { get; set; }
-        public DateTime CreatedOn { get; set; }
-        public DateTime ModifiedOn { get; set; }
+        [Required] public string PostTitle { get; set; }
+        [Required] public DateTime CreatedOn { get; set; }
+        public DateTime? ModifiedOn { get; set; }
         public string ImagePath { get; set; }
 
         public Guid UserId { get; set; }

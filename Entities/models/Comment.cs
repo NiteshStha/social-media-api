@@ -7,12 +7,11 @@ namespace Entities.models
     public class Comment
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public Guid CommentId { get; set; }
+        public int CommentId { get; set; }
 
-        public string CommentDescription { get; set; }
-        public DateTime CreatedOn { get; set; }
-        public DateTime ModifiedOn { get; set; }
+        [Required] public string CommentDescription { get; set; }
+        [Required] public DateTime CreatedOn { get; set; }
+        public DateTime? ModifiedOn { get; set; }
 
         public Guid PostId { get; set; }
         public Post Post { get; set; }
