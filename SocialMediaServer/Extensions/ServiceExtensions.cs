@@ -28,8 +28,8 @@ namespace PatientRegistrationServer.Extensions
 
         public static void ConfigureSqlContext(this IServiceCollection services, IConfiguration config)
         {
-            var connectionConfig = config["ConnectionStrings:PgConnection"];
-            services.AddDbContext<RepositoryContext>(options => options.UseNpgsql(connectionConfig));
+            var connectionConfig = config["ConnectionStrings:SqlServerConnection"];
+            services.AddDbContext<RepositoryContext>(options => options.UseSqlServer(connectionConfig));
         }
 
         public static void ConfigureRepositoryWrapper(this IServiceCollection services)
