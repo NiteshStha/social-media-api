@@ -116,11 +116,20 @@ namespace Entities.Migrations
                         new
                         {
                             UserId = 1,
-                            DateOfBirth = new DateTime(2021, 2, 28, 16, 31, 8, 193, DateTimeKind.Local).AddTicks(7388),
+                            DateOfBirth = new DateTime(2021, 3, 3, 16, 11, 1, 879, DateTimeKind.Local).AddTicks(7819),
                             FirstName = "Nitesh",
                             LastName = "Shrestha",
-                            Password = "acad87e977ce5f1d76494c7b4606bc98d1114b6a2b4cb17d9a03b3dbac26c05a0b897d92c90412c646b45338d4acccb3be20aa8a891f298a89021ea93cb904d8",
+                            Password = "1000.9XHAkS4IgscABohIFI9ZvA==.iP5QKuGxfwPkd5WMiO4dwpPKwZqy3AzOEEHDtXZPDIE=",
                             Username = "nitesh"
+                        },
+                        new
+                        {
+                            UserId = 2,
+                            DateOfBirth = new DateTime(2021, 3, 3, 16, 11, 1, 882, DateTimeKind.Local).AddTicks(7274),
+                            FirstName = "Aayush",
+                            LastName = "Malakar",
+                            Password = "1000.gd3K7C3lfFO/XASmrvVO4g==.k1eSEC7YqFW5AgqyySQwbTEr35vlHtGxyFGqeeBCkCw=",
+                            Username = "aayush"
                         });
                 });
 

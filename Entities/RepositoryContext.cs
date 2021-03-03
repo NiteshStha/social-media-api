@@ -23,7 +23,16 @@ namespace Entities
                 FirstName = "Nitesh",
                 LastName = "Shrestha",
                 Username = "nitesh",
-                Password = PasswordHelper.HashPassword("123456"),
+                Password = PasswordHasher.Hash("nitesh"),
+                DateOfBirth = DateTime.Now
+            });
+            modelBuilder.Entity<User>().HasData(new
+            {
+                UserId = 2,
+                FirstName = "Aayush",
+                LastName = "Malakar",
+                Username = "aayush",
+                Password = PasswordHasher.Hash("aayush"),
                 DateOfBirth = DateTime.Now
             });
         }

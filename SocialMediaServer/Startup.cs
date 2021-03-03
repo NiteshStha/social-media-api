@@ -31,6 +31,8 @@ namespace SocialMediaServer
             services.ConfigureIISIntegration();
             services.ConfigureSqlContext(Configuration);
             services.ConfigureRepositoryWrapper();
+            services.ConfigureAppSettingsAndJWT(Configuration);
+            
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -53,6 +55,7 @@ namespace SocialMediaServer
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseCors(options =>
